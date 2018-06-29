@@ -42,10 +42,10 @@ namespace Todo
 
             services.AddSwaggerGen(c =>
             {
-                c.SwaggerDoc("TodoAPI", new Info
+                c.SwaggerDoc("v1", new Info
                 {
-                    Title = "Todo.Api",
-                    Version = "1"
+                    Title = "TodoAPI",
+                    //Version = "1"
                 });
             });
         }
@@ -69,7 +69,7 @@ namespace Todo
             app.UseSwagger();
             app.UseSwaggerUI(c =>
             {
-                c.SwaggerEndpoint("/swagger/", "TodoAPI");
+                c.SwaggerEndpoint("/swagger/v1/swagger.json", "TodoAPI");
             });
         }
 
