@@ -69,7 +69,7 @@ namespace Todo
             app.UseSwagger();
             app.UseSwaggerUI(c =>
             {
-                c.SwaggerEndpoint("/swagger", "TodoAPI");
+                c.SwaggerEndpoint("/swagger/", "TodoAPI");
             });
         }
 
